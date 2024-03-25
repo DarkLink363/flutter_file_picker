@@ -1,5 +1,5 @@
-import 'package:file_picker/file_picker.dart';
-import 'package:file_picker/src/utils.dart';
+import 'package:file_picker2/file_picker.dart';
+import 'package:file_picker2/src/utils.dart';
 
 class FilePickerMacOS extends FilePicker {
   @override
