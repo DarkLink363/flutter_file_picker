@@ -26,10 +26,10 @@ import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.PluginRegistry;
 
 /**
- * FilePickerPlugin
+ * FilePicker2Plugin
  */
 @SuppressWarnings("deprecation")
-public class FilePickerPlugin implements MethodChannel.MethodCallHandler, FlutterPlugin, ActivityAware {
+public class FilePicker2Plugin implements MethodChannel.MethodCallHandler, FlutterPlugin, ActivityAware {
 
     private static final String TAG = "FilePicker";
     private static final String CHANNEL = "miguelruivo.flutter.plugins.filepicker";
@@ -133,7 +133,7 @@ public class FilePickerPlugin implements MethodChannel.MethodCallHandler, Flutte
             application = (Application) (registrar.context().getApplicationContext());
         }
 
-        final FilePickerPlugin plugin = new FilePickerPlugin();
+        final FilePicker2Plugin plugin = new FilePicker2Plugin();
         plugin.setup(registrar.messenger(), application, activity, registrar, null);
 
     }
@@ -156,7 +156,7 @@ public class FilePickerPlugin implements MethodChannel.MethodCallHandler, Flutte
             return;
         }
 
-        fileType = FilePickerPlugin.resolveType(call.method);
+        fileType = FilePicker2Plugin.resolveType(call.method);
         String[] allowedExtensions = null;
 
         if (fileType == null) {

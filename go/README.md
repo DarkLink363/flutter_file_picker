@@ -17,6 +17,6 @@ import (
 var options = []flutter.Option{
 	... other plugins and options ...
 
-	flutter.AddPlugin(&file_picker.FilePickerPlugin{}),
+	flutter.AddPlugin(&file_picker.FilePicker2Plugin{}),
 }
 ```

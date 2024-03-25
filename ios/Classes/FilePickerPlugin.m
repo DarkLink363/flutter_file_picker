@@ -1,13 +1,13 @@
-#import "FilePickerPlugin.h"
+#import "FilePicker2Plugin.h"
 #import "FileUtils.h"
 #import "ImageUtils.h"
 
 #ifdef PICKER_MEDIA
 @import DKImagePickerController;
 
-@interface FilePickerPlugin() <DKImageAssetExporterObserver>
+@interface FilePicker2Plugin() <DKImageAssetExporterObserver>
 #else
-@interface FilePickerPlugin()
+@interface FilePicker2Plugin()
 #endif
 @property (nonatomic) FlutterResult result;
 @property (nonatomic) FlutterEventSink eventSink;
@@ -25,7 +25,7 @@
 @property (nonatomic) dispatch_group_t group;
 @end
 
-@implementation FilePickerPlugin
+@implementation FilePicker2Plugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
     
     FlutterMethodChannel* channel = [FlutterMethodChannel
@@ -36,7 +36,7 @@
                                          eventChannelWithName:@"miguelruivo.flutter.plugins.filepickerevent"
                                          binaryMessenger:[registrar messenger]];
     
-    FilePickerPlugin* instance = [[FilePickerPlugin alloc] init];
+    FilePicker2Plugin* instance = [[FilePicker2Plugin alloc] init];
     
     [registrar addMethodCallDelegate:instance channel:channel];
     [eventChannel setStreamHandler:instance];

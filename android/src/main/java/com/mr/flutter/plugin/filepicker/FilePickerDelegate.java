@@ -31,7 +31,7 @@ import io.flutter.plugin.common.PluginRegistry;
 public class FilePickerDelegate implements PluginRegistry.ActivityResultListener, PluginRegistry.RequestPermissionsResultListener {
 
     private static final String TAG = "FilePickerDelegate";
-    private static final int REQUEST_CODE = (FilePickerPlugin.class.hashCode() + 43) & 0x0000ffff;
+    private static final int REQUEST_CODE = (FilePicker2Plugin.class.hashCode() + 43) & 0x0000ffff;
 
     private final Activity activity;
     private final PermissionManager permissionManager;

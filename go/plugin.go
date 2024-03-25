@@ -12,17 +12,17 @@ import (
 
 const channelName = "miguelruivo.flutter.plugins.filepicker"
 
-type FilePickerPlugin struct{}
+type FilePicker2Plugin struct{}
 
-var _ flutter.Plugin = &FilePickerPlugin{} // compile-time type check
+var _ flutter.Plugin = &FilePicker2Plugin{} // compile-time type check
 
-func (p *FilePickerPlugin) InitPlugin(messenger plugin.BinaryMessenger) error {
+func (p *FilePicker2Plugin) InitPlugin(messenger plugin.BinaryMessenger) error {
 	channel := plugin.NewMethodChannel(messenger, channelName, plugin.JSONMethodCodec{})
 	channel.CatchAllHandleFunc(p.handleFilePicker)
 	return nil
 }
 
-func (p *FilePickerPlugin) handleFilePicker(methodCall interface{}) (reply interface{}, err error) {
+func (p *FilePicker2Plugin) handleFilePicker(methodCall interface{}) (reply interface{}, err error) {
 	method := methodCall.(plugin.MethodCall).Method
 
 	if "dir" == method {

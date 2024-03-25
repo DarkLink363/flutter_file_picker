@@ -9,7 +9,7 @@
 #import <PhotosUI/PHPicker.h>
 #endif
 
-@interface FilePickerPlugin : NSObject<FlutterPlugin, FlutterStreamHandler, UITabBarDelegate, UINavigationControllerDelegate, UIAdaptivePresentationControllerDelegate
+@interface FilePicker2Plugin : NSObject<FlutterPlugin, FlutterStreamHandler, UITabBarDelegate, UINavigationControllerDelegate, UIAdaptivePresentationControllerDelegate
 #ifdef PICKER_MEDIA
     , UIImagePickerControllerDelegate
 #ifdef PHPicker
