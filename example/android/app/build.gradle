@@ -22,7 +22,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.mr.flutter.plugin.filepicker.example"
+        applicationId "com.mr.flutter.plugin.filepicker2.example"
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion 33
         versionCode 1
@@ -37,7 +37,7 @@ android {
         }
     }
 
-    namespace 'com.mr.flutter.plugin.filepicker.example'
+    namespace 'com.mr.flutter.plugin.filepicker2.example'
 }
 
 flutter {
